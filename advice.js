@@ -3,7 +3,7 @@ const btn = document.querySelector('.btn');
 const id = document.querySelector('.id');
 
 const getAdvice = async () => {
-    await fetch("http://api.adviceslip.com/advice")
+    await fetch("https://api.adviceslip.com/advice")
         .then((res) => res.json()) 
         .then((data) => {
             console.log(data.slip.advice);
