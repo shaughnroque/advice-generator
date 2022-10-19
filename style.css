@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&family=Outfit:wght@100;300;400;600&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* font-size: 62.5%; 1rem = 10px 10/16 browser default font size = 62.5% 16 is the default font-size */
+}
+
+.main-container{
+    background-color: hsl(218, 23%, 16%);
+    height:100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.advice-container{
+    height:45%;
+    width:36%;
+    background-color:  hsl(217, 19%, 24%);
+    border-radius: 4%;
+    padding-left:30px;
+    padding-right:30px;
+
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.btn{
+    height:60px;
+    width:60px;
+    border-radius: 50%;
+    border:none;
+    position:absolute;
+    bottom:170px;
+    background-color: hsl(150, 100%, 66%);  
+    cursor: pointer;
+}
+
+/* Added animation for fun and to make the button look more interactive */
+
+.btn:hover {
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+    transform: translate3d(0, 0, 0);
+    perspective: 1000px;
+  }
+  
+  @keyframes shake {
+    10%, 90% {
+      transform: translate3d(-1px, 0, 0);
+    }
+    20%, 80% {
+      transform: translate3d(2px, 0, 0);
+    }
+    30%, 50%, 70% {
+      transform: translate3d(-4px, 0, 0);
+    }
+    40%, 60% {
+      transform: translate3d(4px, 0, 0);
+    }
+  }
+
+.divider{
+    margin-top: 30px;
+    vertical-align: bottom;
+}
+
+.divider-mobile{
+    display: none;
+}
+
+.id {
+    font-family: 'Manrope', sans-serif;
+    letter-spacing: 4px;
+    font-size:12px;
+    text-transform: capitalize;
+    font-weight: 800;
+    color:hsl(150, 100%, 66%);
+    margin-top:15px;
+    padding:20px;
+}
+
+.quote{
+    font-size: 28px;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 800;
+    color:hsl(193, 38%, 86%);
+    overflow: none;
+    margin-top:10px;
+}
+
+
+@media (max-width:700px){
+    .advice-container{
+        height:50%;
+        width:85%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .quote{
+        margin-top:5px;
+    }
+
+    .divider{
+        display:none;
+    }
+    .divider-mobile{
+        display:block;
+        margin-top:10px;
+    }
+
+    .btn{
+        bottom:150px;
+    }
+}
+
+/* Find a way to make text not push img down
